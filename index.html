@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高中数学资源下载中心</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 首页封面 -->
+    <div id="homePage" class="page active">
+        <div class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="hero-icon">
+                    <i class="fas fa-square-root-alt"></i>
+                </div>
+                <h1 class="hero-title">高中数学资源下载中心</h1>
+                <p class="hero-subtitle">精选试卷 · 章节练习 · 助力学习</p>
+                
+                <div class="grade-cards">
+                    <div class="grade-card" data-grade="grade1">
+                        <div class="grade-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>高一</h3>
+                        <p>必修一 · 必修二</p>
+                    </div>
+                    <div class="grade-card" data-grade="grade2">
+                        <div class="grade-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>高二</h3>
+                        <p>选择性必修</p>
+                    </div>
+                    <div class="grade-card" data-grade="grade3">
+                        <div class="grade-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <h3>高三</h3>
+                        <p>综合复习</p>
+                    </div>
+                    <div class="grade-card" data-grade="gaokao">
+                        <div class="grade-icon gaokao">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>高考真题</h3>
+                        <p>历年高考卷</p>
+                    </div>
+                    <div class="grade-card" data-grade="competition">
+                        <div class="grade-icon competition">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>数学竞赛</h3>
+                        <p>联赛 · CMO · IMO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>© 2024 高中数学资源下载中心 | 仅供学习交流使用</p>
+        </footer>
+    </div>
+
+    <!-- 年级详情页 -->
+    <div id="gradePage" class="page">
+        <header class="page-header">
+            <button class="back-btn" id="backBtn">
+                <i class="fas fa-arrow-left"></i>
+                返回首页
+            </button>
+            <h1 id="gradeTitle">高一数学</h1>
+        </header>
+
+        <main class="grade-content">
+            <div class="container">
+                <!-- 文件夹分类 -->
+                <div class="folder-grid" id="folderGrid">
+                    <div class="folder-card" data-folder="exams">
+                        <div class="folder-icon exams">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>各地期末试卷</h3>
+                        <p class="folder-count">0 套试卷</p>
+                    </div>
+                    <div class="folder-card" data-folder="chapters">
+                        <div class="folder-icon chapters">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>各章节练习</h3>
+                        <p class="folder-count">0 套试卷</p>
+                    </div>
+                    <div class="folder-card" data-folder="mock">
+                        <div class="folder-icon mock">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h3>模拟测试卷</h3>
+                        <p class="folder-count">0 套试卷</p>
+                    </div>
+                </div>
+
+                <!-- 文件列表区域 -->
+                <div class="file-section" id="fileSection" style="display: none;">
+                    <div class="section-header">
+                        <button class="back-folder-btn" id="backFolderBtn">
+                            <i class="fas fa-arrow-left"></i>
+                            返回
+                        </button>
+                        <h2 id="folderTitle">各地期末试卷</h2>
+                        <span class="file-count" id="fileCount">0 套</span>
+                    </div>
+
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="搜索试卷名称...">
+                    </div>
+
+                    <div class="file-grid" id="fileGrid"></div>
+
+                    <div class="empty-state" id="emptyState" style="display: none;">
+                        <i class="fas fa-folder-open"></i>
+                        <p>暂无资源</p>
+                        <span>该分类下还没有上传文件</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/resources.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
